@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Asos Crawler Project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Eran Jehassy <br> Din Salman</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#github" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">GitHub</a> 
+    <a href="#technologies" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Technologies</a> 
+    <a href="#performance" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Performance</a> 
+    <a href="#inverted-index" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Inverted Index</a>
+    <a href="#tf-idf" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">tf-idf</a>
+    <a href="#query-expansion" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Query Expansion</a>
+    <a href="#hubs-authorities" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Hubs And Authorities</a> 
+    <a href="#page-rank" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Page Rank</a>
+    <a href="#relevance-feedback" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Relevance Feedback</a>
+    <a href="#challenges" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Challenges</a>
+  </div>
+</nav>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="github">
+    <h1 class="w3-jumbo"><b>Asos Crawler</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>GitHub</b></h1>
+    <a href="https://github.com/dinsal1993/AsosWebCrawler"><b>GitHub Repository</b></a>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+
+  <!-- Technologies -->
+  <div class="w3-container" id="technologies" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Technologies</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p><b>Beautiful Soup Library</b> - Used to traverse the HTML Tree we get from the website <br>
+        <b>xlsxwriter Library</b> - Used to write text into excel <br>
+        <b>requests Library</b> - Used to send http requests to websites</p>
+  </div>
+
+  <!-- Performance -->
+  <div class="w3-container" id="performance" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Performance</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>The Crawler took approximately 18 minutes for the two queries. <br>
+        The time is dependent on several factors: <br> <br>
+        
+        Number of products returned <br>
+        Access time to each product <br>
+        CPU Speed <br>
+        Server load <br> <br>
+        We can improve the time it takes the crawler to get the results using parallel computing. <br>
+        Since each page is independent of the others, if we utilize several proccessors we can cut the time by more <br>than 50%, assuming Asos does not block us from making HTTP requests. <br>
+        We can also use a low-level, faster programming language to access the data, and than use python only for <br>proccessing.</p>
+  </div>
+
+  <!-- Inverted Index -->
+  <div class="w3-container" id="inverted-index" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Inverted Index</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Inverted Index for query 1:</p> <br> <br>
+    <img src="images\InvertedIndex1.png"> <br>
+    <p>Inverted Index for query 2:</p> <br> <br>
+    <img src="images\InvertedIndex2.png"> <br>    
+  </div>
+
+  <!-- tf-idf -->
+  <div class="w3-container" id="tf-idf" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>tf-idf</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>tf:</p><br>
+    <img src="images\tf.png"> <br>
+
+    <p>df:</p><br>
+    <img src="images\df.png"> <br>
+
+    <p>idf:</p><br>
+    <img src="images\idf.png"> <br>
+
+    <p>tf-idf for query 1:</p> <br> <br>
+    <img src="images\tf-idf-1.png"> <br>
+    <img src="images\tf-idf-2.png"> <br>
+    <img src="images\tf-idf3.png"> <br>
+  </div>
+
+  <!-- Query expansion -->
+  <div class="w3-container" id="query-expansion" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Query Expansion</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>It is possible to expand the query with synonims - if he for example writes pants - add trousers and so on.
+      Moreover, we can adjust the paramaters to search for a percentage about a threshhold like cotton > 90%. </p> <br> <br>
+  </div>
+  
+  <!-- Hubs And Authorities -->
+  <div class="w3-container" id="hubs-authorities" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Hubs And Authorities</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    The Three pages we chose are:
+            <ul>
+                <li><a href="https://www.asos.com/asos-design/asos-design-brushed-oxford-shirt-in-cotton-blend-in-taupe/prd/202662455?clr=taupe&colourWayId=202662457&SearchQuery=men+shirt+100%25+cotton">ASOS DESIGN brushed oxford shirt in cotton blend in taupe</a></li>
+                <li><a href="https://www.asos.com/asos-design/asos-design-brushed-oxford-shirt-in-cotton-blend-in-sky-blue/prd/202662438?clr=sky-blue&colourWayId=202662439&SearchQuery=men+shirt+100%25+cotton">ASOS DESIGN 90s oversized cord shirt in mustard in cotton blend</a></li>
+                <li><a href="https://www.asos.com/asos-design/asos-design-90s-oversized-cord-shirt-in-mustard-in-cotton-blend/prd/203917416?clr=mustard&colourWayId=203917442&SearchQuery=men+shirt+100%25+cotton">ASOS DESIGN brushed oxford shirt in cotton blend in sky blue</a></li>
+            </ul>
+            To calculate Hub and Authority we made a graph: <br>
+            <img src="images\graph.jpeg"><br>
+            we than made Matrix A, A-transpose and initial hub vector (1,1,1) to begin calculations: <br>
+            <img src="images\initial.jpeg"><br>
+            Than we multiplied the Matrix-t with initial hub vector to get new Authority vector.<br>
+            Than multiply the result with Matrix A to get new hub vector.<br>
+            <img src="images\calculations.jpeg"><br>
+            Now we normalize the results until they stabilize: <br> <img src="images\Normalization.jpeg">
+            <br>
+  </div>
+
+  <!-- PageRank -->
+  <div class="w3-container" id="page-rank" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>PageRank</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    Our query was: <b>"men shirt 100% cotton"</b><br>
+    The 10 pages we chose from the results were: <br> <br>
+  </div>
+
+  <!-- The Products -->
+  <div class="w3-row-padding">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <a href="https://www.asos.com/asos-design/asos-design-brushed-oxford-shirt-in-cotton-blend-in-taupe/prd/202662455?clr=taupe&colourWayId=202662457&SearchQuery=men+shirt+100%25+cotton"><img src="images\s1.jpeg" style="width:100%"></a>
+        <div class="w3-container">
+          <p>ASOS DESIGN brushed oxford shirt in cotton blend in taupe</p>
+          <p class="w3-opacity">Page Rank: 0.1130</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <a href="https://www.asos.com/asos-design/asos-design-cotton-shacket-in-khaki/prd/202820912?ctaref=we+recommend+grid_0&featureref1=we+recommend+pers"><img src="images\s2.jpeg" style="width:100%"></a>
+        <div class="w3-container">
+          <p>ASOS DESIGN cotton shacket in khaki</p>
+          <p class="w3-opacity">Page Rank: 0.1304</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <a href="https://www.asos.com/asos-design/asos-design-90s-oversized-cord-shirt-in-mustard-in-cotton-blend/prd/203917416?clr=mustard&colourWayId=203917442&SearchQuery=men+shirt+100%25+cotton"><img src="images\s3.jpeg" style="width:100%"></a>
+        <div class="w3-container">
+          <p>ASOS DESIGN 90s oversized cord shirt in mustard in cotton blend</p>
+          <p class="w3-opacity">Page Rank: 0.1125</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+            <a href="https://www.asos.com/asos-design/asos-design-brushed-oxford-shirt-in-cotton-blend-in-bottle-green/prd/203438742?clr=bottle-green&colourWayId=203438757&SearchQuery=men+shirt+100%25+cotton"><img src="images\s4.jpeg" style="width:100%"></a>
+          <div class="w3-container">
+            <p>ASOS DESIGN brushed oxford shirt in cotton blend in bottle green</p>
+            <p class="w3-opacity">Page Rank: 0.1216</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+            <a href="https://www.asos.com/asos-design/asos-design-brushed-oxford-shirt-in-cotton-blend-in-soft-pink/prd/202662401?clr=soft-pink&colourWayId=202662403&SearchQuery=men+shirt+100%25+cotton"><img src="images\s5.jpeg" style="width:100%"></a>
+          <div class="w3-container">
+            <p>ASOS DESIGN brushed oxford shirt in cotton blend in soft pink</p>
+            <p class="w3-opacity">Page Rank: 0.1130</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+            <a href="https://www.asos.com/asos-design/asos-design-brushed-oxford-shirt-in-cotton-blend-in-sky-blue/prd/202662438?clr=sky-blue&colourWayId=202662439&SearchQuery=men+shirt+100%25+cotton"><img src="images\s6.jpeg" style="width:100%"></a>
+          <div class="w3-container">
+            <p>ASOS DESIGN brushed oxford shirt in cotton blend in sky blue</p>
+            <p class="w3-opacity">Page Rank: 0.1130</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+            <a href="https://www.asos.com/dickies/dickies-100-aop-shirt-in-black/prd/201637884?clr=black&colourWayId=201637885&SearchQuery=men+shirt+100%25+cotton"><img src="images\s7.jpeg" style="width:100%"></a>
+          <div class="w3-container">
+            <p>Dickies 100 AOP shirt in black</p>
+            <p class="w3-opacity">Page Rank: 0.0783</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+            <a href="https://www.asos.com/asos-design/asos-design-boxy-oversized-shirt-in-brown-cotton-jacquard/prd/203724086?clr=brown&colourWayId=203724090&SearchQuery=men+shirt+100%25+cotton"><img src="images\s8.jpeg" style="width:100%"></a>
+          <div class="w3-container">
+            <p>ASOS DESIGN boxy oversized shirt in brown cotton jacquard</p>
+            <p class="w3-opacity">Page Rank: 0.0652</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+            <a href="https://www.asos.com/farah/farah-brewer-slim-fit-cotton-oxford-shirt-in-burgundy/prd/203502405?clr=burgundy&colourWayId=203502410&SearchQuery=men+shirt+100%25+cotton"><img src="images\s9.jpeg" style="width:100%"></a>
+          <div class="w3-container">
+            <p>Farah Brewer slim fit cotton oxford shirt in burgundy</p>
+            <p class="w3-opacity">Page Rank: 0.0652</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+            <a href="https://www.asos.com/asos-design/asos-design-90s-oversized-style-cord-shirt-in-collegiate-green/prd/202576316?ctaref=more+colours+swatches&featureref1=more+colours+swatches"><img src="images\s10.jpeg" style="width:100%"></a>
+          <div class="w3-container">
+            <p>ASOS DESIGN 90s oversized style cord shirt in collegiate green</p>
+            <p class="w3-opacity">Page Rank: 0.0877</p>
+          </div>
+        </div>
+      </div>
+  </div>
+  <p><b>We made a graph to calculate the PageRank:</b><br>
+    <img src="images\PRGraph.jpeg"> <br>
+    <b>The results are:</b> <br> <br>
+    <img src="images\pageRank.png"> </p>
+  <!-- Relevance Feedback -->
+  <div class="w3-container" id="relevance-feedback" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Relevance Feedback</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>all the results were relevant to us - because they all met the query criteria which is 100% cotton.<br>
+       For the users - after the material filters, they chose R / NR based on personal preference for fashion.
+    </p>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">User 1</li>
+        <li><img src="images\RF1.jpeg" style="width: 100%;"></li>
+      </ul>
+    </div>
+        
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-red w3-xlarge w3-padding-32">User 2</li>
+        <li><img src="images\RF2.jpeg" style="width: 100%;"></li>
+      </ul>
+    </div>
+  </div>
+  <p> It is not possible to suggest a customized query because all the results are relevant, the only difference between them is personal preference.</p>
+
+  <!-- Challenges -->
+<div class="w3-container" id="challenges" style="margin-top:75px">
+  <h1 class="w3-xxxlarge w3-text-red"><b>Challenges</b></h1>
+  <hr style="width:50px;border:5px solid red" class="w3-round">
+  <p>We had a problem when we had a product that was out of stock - we thought Asos was blocking us because beautiful soup return Null object. After investegating we realised the if the item is out of stock than the "About Me" product section is not visible. </p> <br> <br>
+</div>
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
